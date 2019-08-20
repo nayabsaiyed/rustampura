@@ -32,12 +32,13 @@ phases:
       - cd /var/www/source/
       - git init
       - git pull origin master
-      # - command
-  post_build:
-    commands:
-      - cd /var/www/source/
-      #- git pull origin master
       - cp -rp /var/www/source/* /tmp/
+      # - command
+  #post_build:
+    #commands:
+      #- cd /var/www/source/
+      #- git pull origin master
+      #- cp -rp /var/www/source/* /tmp/
 #artifacts:
   #files:
     # - location
