@@ -21,19 +21,22 @@ phases:
       # - command
       # - command
       - export GIT_ALLOW_PROTOCOL="ssh"
-      - cd /var/www/html/
+      - mkdir /var/www/source/
   #pre_build:
     #commands:
       # - command
       # - command
   #build:
     #commands:
-      # - git pull
+      - cd /var/www/source/
+      - git init
+      - git pull
       # - command
   post_build:
     commands:
-      - cd /var/www/html
+      - cd /var/www/source/
       - git pull origin master
+      - cp -rp /var/www/source/* /tmp/
 #artifacts:
   #files:
     # - location
