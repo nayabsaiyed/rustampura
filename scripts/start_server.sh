@@ -1,3 +1,3 @@
 #!/bin/bash
-service mysqld start
+service mariadb start
 service httpd start

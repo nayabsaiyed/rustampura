@@ -5,5 +5,5 @@ if [[ -n  $isExistApp ]]; then
 fi
 isExistApp=`pgrep mysqld`
 if [[ -n  $isExistApp ]]; then
-    service mysqld stop
+    service mariadb stop
 fi
