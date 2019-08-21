@@ -1,3 +1,3 @@
 #!/bin/bash
-service mysqld status
+service mariadb status
 service httpd status
